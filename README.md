@@ -1,4 +1,5 @@
 TFTColor
 ========
 
-A simple UIColor category to get color with hex code.
+A simple UIColor category to get UIColor from hex code.
+
