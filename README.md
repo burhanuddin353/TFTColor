@@ -25,7 +25,8 @@ A simple UIColor category to get UIColor from RGB hex values, CMYK hex values an
 * The beautiful part of this library is that you can input Hex values with `#`, `0x` or `0X` and the category will take care of this.
 * Also you can input hex value of any length and this will be handled.
 * The category also takes care of non-hex characters.
-* Supporting Formats for RGB Hex:
+
+### Supporting Formats for RGB Hex:
 1. #B
 2. #BB
 3. #RGB
@@ -33,7 +34,7 @@ A simple UIColor category to get UIColor from RGB hex values, CMYK hex values an
 5. #RGGBB
 6. #RRGGBB 
 
-> Supporting Formats for CMYK Hex:
+### Supporting Formats for CMYK Hex:
 1. #K
 2. #KK
 3. #YKK
