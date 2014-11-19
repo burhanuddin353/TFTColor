@@ -14,7 +14,7 @@
 		4472A5951A1B13CF00B3C5F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4472A5941A1B13CF00B3C5F4 /* Images.xcassets */; };
 		4472A5981A1B13CF00B3C5F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4472A5961A1B13CF00B3C5F4 /* LaunchScreen.xib */; };
 		4472A5A41A1B13D000B3C5F4 /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472A5A31A1B13D000B3C5F4 /* ColorTests.m */; };
-		4472A5B41A1B34D400B3C5F4 /* UIColor+TFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472A5B31A1B34D400B3C5F4 /* UIColor+TFT.m */; };
+		4472A5B81A1C648800B3C5F4 /* UIColor+TFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 4472A5B71A1C648800B3C5F4 /* UIColor+TFT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		4472A59D1A1B13D000B3C5F4 /* ColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4472A5A21A1B13D000B3C5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4472A5A31A1B13D000B3C5F4 /* ColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
-		4472A5B21A1B34D400B3C5F4 /* UIColor+TFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TFT.h"; sourceTree = "<group>"; };
-		4472A5B31A1B34D400B3C5F4 /* UIColor+TFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TFT.m"; sourceTree = "<group>"; };
+		4472A5B61A1C648800B3C5F4 /* UIColor+TFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TFT.h"; sourceTree = "<group>"; };
+		4472A5B71A1C648800B3C5F4 /* UIColor+TFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TFT.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		4472A5861A1B13CF00B3C5F4 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				4472A5B11A1B34D400B3C5F4 /* TFTColor */,
+				4472A5B51A1C648800B3C5F4 /* TFTColor */,
 				4472A58B1A1B13CF00B3C5F4 /* AppDelegate.h */,
 				4472A58C1A1B13CF00B3C5F4 /* AppDelegate.m */,
 				4472A58E1A1B13CF00B3C5F4 /* ViewController.h */,
@@ -123,13 +123,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4472A5B11A1B34D400B3C5F4 /* TFTColor */ = {
+		4472A5B51A1C648800B3C5F4 /* TFTColor */ = {
 			isa = PBXGroup;
 			children = (
-				4472A5B21A1B34D400B3C5F4 /* UIColor+TFT.h */,
-				4472A5B31A1B34D400B3C5F4 /* UIColor+TFT.m */,
+				4472A5B61A1C648800B3C5F4 /* UIColor+TFT.h */,
+				4472A5B71A1C648800B3C5F4 /* UIColor+TFT.m */,
 			);
-			path = TFTColor;
+			name = TFTColor;
+			path = ../../TFTColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +235,7 @@
 			files = (
 				4472A5901A1B13CF00B3C5F4 /* ViewController.m in Sources */,
 				4472A58D1A1B13CF00B3C5F4 /* AppDelegate.m in Sources */,
-				4472A5B41A1B34D400B3C5F4 /* UIColor+TFT.m in Sources */,
+				4472A5B81A1C648800B3C5F4 /* UIColor+TFT.m in Sources */,
 				4472A58A1A1B13CF00B3C5F4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

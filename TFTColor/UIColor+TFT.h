@@ -10,6 +10,10 @@
 
 @interface UIColor (TFT)
 
-+ (UIColor *)colorWithHex:(NSString *)hexCode;
++ (UIColor *)colorWithRGBHex:(NSString *)hexCode;
+
++ (UIColor *)colorWithCyan:(CGFloat)cyan magenta:(CGFloat)magenta yellow:(CGFloat)yellow black:(CGFloat)black alpha:(CGFloat)alpha;
+
++ (UIColor *)colorWithCMYKHex:(NSString *)hexCode;
 
 @end
