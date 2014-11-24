@@ -16,4 +16,6 @@
 
 + (UIColor *)colorWithCMYKHex:(NSString *)hexCode;
 
++ (NSString *)hexStringForColor:(UIColor *)color;
+
 @end

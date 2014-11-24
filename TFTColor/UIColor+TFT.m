@@ -8,6 +8,9 @@
 
 #import "UIColor+TFT.h"
 
+CGFloat const MAX_VAL = 255.0f;
+NSString *const HEX_CHAR_SET = @"abcdefABCDEF1234567890";
+
 @implementation UIColor (TFT)
 
 + (void)cleanHexString:(NSMutableString *)hexString expectedLength:(int)length {
@@ -24,7 +27,7 @@
     }
     
     //Check for Special Characters. Truncate the string from first special character.
-    NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:@"abcdefABCDEF1234567890"] invertedSet];
+    NSCharacterSet *characterSet = [[NSCharacterSet characterSetWithCharactersInString:HEX_CHAR_SET] invertedSet];
     
     NSUInteger firstInvalidChar = [hexString rangeOfCharacterFromSet:characterSet].location;
     if (firstInvalidChar != NSNotFound) {
@@ -32,29 +35,38 @@
         [hexString deleteCharactersInRange:NSMakeRange(firstInvalidChar, hexString.length - firstInvalidChar)];
     }
     
-    //Truncate the excess string if length is greater than expected length
-    if (hexString.length > length) {
-        
-        [hexString deleteCharactersInRange:NSMakeRange(length, hexString.length - length)];
-    }
-    
     //Repeat each hex digit if length is half
-    if (hexString.length == length/2) {
+    if (length % 2 == 0 && hexString.length == length/2) {
         
         for (int i = 0; i < length/2; ++i) {
             
             [hexString insertString:[hexString substringWithRange:NSMakeRange(i*2, 1)] atIndex:i*2];
         }
-    }
-    
-    //Appending 0s if the length is less than expected length
-    if (hexString.length != length/2 &&
-        hexString.length <= length) {
+    } else if (hexString.length < length) {
         
         while (hexString.length != length) {
             [hexString insertString:@"0" atIndex:0];
         }
+    } else if(hexString.length > length) {
+         //Truncate the excess string if length is greater than expected length
+        
+        [hexString deleteCharactersInRange:NSMakeRange(length, hexString.length - length)];
     }
+}
+
++ (NSArray *)colorComponentsWithHexcode:(NSMutableString *)hexcode components:(int)components {
+    
+    //Actual code converting each two hex digits into int
+    
+    NSMutableArray *colorComponents = [NSMutableArray array];
+    for (int i = 0; i < components * 2; i += 2) {
+        
+        NSString *hex = [hexcode substringWithRange:NSMakeRange(i, 2)];
+        unsigned int color = 0;
+        [[NSScanner scannerWithString:hex] scanHexInt:&color];
+        [colorComponents addObject:[NSNumber numberWithFloat:color / MAX_VAL]];
+    }
+    return colorComponents;
 }
 
 + (UIColor *)colorWithRGBHex:(NSString *)hexCode {
@@ -62,28 +74,15 @@
     NSMutableString *mutableHexCode =  [hexCode mutableCopy];
     
     [UIColor cleanHexString:mutableHexCode expectedLength:6];
-    
-    //Actual code converting each two hex digits into int
-    NSString *redHex = [mutableHexCode substringWithRange:NSMakeRange(0, 2)];
-    NSString *greenHex = [mutableHexCode substringWithRange:NSMakeRange(2, 2)];
-    NSString *blueHex = [mutableHexCode substringWithRange:NSMakeRange(4, 2)];
-    
-    unsigned int red = 0;
-    unsigned int green = 0;
-    unsigned int blue = 0;
-    
-    [[NSScanner scannerWithString:redHex] scanHexInt:&red];
-    [[NSScanner scannerWithString:greenHex] scanHexInt:&green];
-    [[NSScanner scannerWithString:blueHex] scanHexInt:&blue];
-    
-    return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1.0f];
+    NSArray *color = [self colorComponentsWithHexcode:mutableHexCode components:3];
+    return [UIColor colorWithRed:[color[0] floatValue] green:[color[1] floatValue] blue:[color[2] floatValue] alpha:1.0f];
 }
 
 + (UIColor *)colorWithCyan:(CGFloat)cyan magenta:(CGFloat)magenta yellow:(CGFloat)yellow black:(CGFloat)black alpha:(CGFloat)alpha {
     
-    CGFloat red = 255 * (1-cyan) * (1-black);
-    CGFloat green = 255 * (1-magenta) * (1-black);
-    CGFloat blue = 255 * (1-yellow) * (1-black);
+    CGFloat red = (1.0f - cyan) * (1.0f - black);
+    CGFloat green = (1.0f - magenta) * (1.0f - black);
+    CGFloat blue = (1.0f - yellow) * (1.0f -black);
     
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
@@ -93,24 +92,24 @@
     NSMutableString *mutableHexCode =  [hexCode mutableCopy];
     
     [UIColor cleanHexString:mutableHexCode expectedLength:8];
+    NSArray *color = [self colorComponentsWithHexcode:mutableHexCode components:4];
+    return [UIColor colorWithCyan:[color[0] floatValue] magenta:[color[1] floatValue] yellow:[color[2] floatValue] black:[color[3] floatValue] alpha:1.0f];
+}
+
++ (NSString *)hexStringForColor:(UIColor *)color {
     
-    //Actual code converting each two hex digits into int
-    NSString *cyanHex = [mutableHexCode substringWithRange:NSMakeRange(0, 2)];
-    NSString *magentaHex = [mutableHexCode substringWithRange:NSMakeRange(2, 2)];
-    NSString *yellowHex = [mutableHexCode substringWithRange:NSMakeRange(4, 2)];
-    NSString *blackHex = [mutableHexCode substringWithRange:NSMakeRange(6, 2)];
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    CGFloat alpha;
     
-    unsigned int cyan = 0;
-    unsigned int magenta = 0;
-    unsigned int yellow = 0;
-    unsigned int black = 0;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
     
-    [[NSScanner scannerWithString:cyanHex] scanHexInt:&cyan];
-    [[NSScanner scannerWithString:magentaHex] scanHexInt:&magenta];
-    [[NSScanner scannerWithString:yellowHex] scanHexInt:&yellow];
-    [[NSScanner scannerWithString:blackHex] scanHexInt:&black];
+    NSString *redHex = [NSString stringWithFormat:@"%02x", (int)(red * 255)];
+    NSString *greenHex = [NSString stringWithFormat:@"%02x", (int)(green * 255)];
+    NSString *blueHex = [NSString stringWithFormat:@"%02x", (int)(blue * 255)];
     
-    return [UIColor colorWithCyan:cyan/255.0f magenta:magenta/255.0f yellow:yellow/255.0f black:black/255.0f alpha:1.0f];
+    return [NSString stringWithFormat:@"%@%@%@", redHex, greenHex, blueHex];
 }
 
 @end
