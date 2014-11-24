@@ -21,6 +21,9 @@ A simple UIColor category to get UIColor from RGB hex values, CMYK hex values an
 
 `+ (UIColor *)colorWithCMYKHex:(NSString *)hexCode;`
 
+### Get Hex from UIColor
+
+`+ (NSString *)hexStringForColor:(UIColor *)color;`
 
 * The beautiful part of this library is that you can input Hex values with `#`, `0x` or `0X` and the category will take care of this.
 * Also you can input hex value of any length and this will be handled.
