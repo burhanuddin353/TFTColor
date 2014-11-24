@@ -18,10 +18,8 @@ NSString *const HEX_CHAR_SET = @"abcdefABCDEF1234567890";
     if ([hexString hasPrefix:@"#"]) {
         
         [hexString deleteCharactersInRange:NSMakeRange(0, 1)];
-    }
-    
-    if ([hexString hasPrefix:@"0x"] ||
-        [hexString hasPrefix:@"0X"]) {
+    } else if ([hexString hasPrefix:@"0x"] ||
+               [hexString hasPrefix:@"0X"]) {
         
         [hexString deleteCharactersInRange:NSMakeRange(0, 2)];
     }
@@ -57,8 +55,8 @@ NSString *const HEX_CHAR_SET = @"abcdefABCDEF1234567890";
 + (NSArray *)colorComponentsWithHexcode:(NSMutableString *)hexcode components:(int)components {
     
     //Actual code converting each two hex digits into int
-    
     NSMutableArray *colorComponents = [NSMutableArray array];
+
     for (int i = 0; i < components * 2; i += 2) {
         
         NSString *hex = [hexcode substringWithRange:NSMakeRange(i, 2)];
@@ -75,6 +73,7 @@ NSString *const HEX_CHAR_SET = @"abcdefABCDEF1234567890";
     
     [UIColor cleanHexString:mutableHexCode expectedLength:6];
     NSArray *color = [self colorComponentsWithHexcode:mutableHexCode components:3];
+    
     return [UIColor colorWithRed:[color[0] floatValue] green:[color[1] floatValue] blue:[color[2] floatValue] alpha:1.0f];
 }
 
@@ -93,6 +92,7 @@ NSString *const HEX_CHAR_SET = @"abcdefABCDEF1234567890";
     
     [UIColor cleanHexString:mutableHexCode expectedLength:8];
     NSArray *color = [self colorComponentsWithHexcode:mutableHexCode components:4];
+    
     return [UIColor colorWithCyan:[color[0] floatValue] magenta:[color[1] floatValue] yellow:[color[2] floatValue] black:[color[3] floatValue] alpha:1.0f];
 }
 
@@ -105,11 +105,12 @@ NSString *const HEX_CHAR_SET = @"abcdefABCDEF1234567890";
     
     [color getRed:&red green:&green blue:&blue alpha:&alpha];
     
-    NSString *redHex = [NSString stringWithFormat:@"%02x", (int)(red * 255)];
-    NSString *greenHex = [NSString stringWithFormat:@"%02x", (int)(green * 255)];
-    NSString *blueHex = [NSString stringWithFormat:@"%02x", (int)(blue * 255)];
+    NSMutableString *hexString = [NSMutableString string];
+    [hexString appendFormat:@"%02x", (int)(red * 255)];
+    [hexString appendFormat:@"%02x", (int)(green * 255)];
+    [hexString appendFormat:@"%02x", (int)(blue * 255)];
     
-    return [NSString stringWithFormat:@"%@%@%@", redHex, greenHex, blueHex];
+    return hexString;
 }
 
 @end

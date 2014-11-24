@@ -33,6 +33,7 @@
 - (IBAction)rgbHexTextChanged:(UITextField *)sender {
     
     [viewRGBHex setBackgroundColor:[UIColor colorWithRGBHex:sender.text]];
+    NSLog(@"%@", [UIColor hexStringForColor:viewRGBHex.backgroundColor]);
 }
 
 - (IBAction)cmykHexTextChanged:(UITextField *)sender {
