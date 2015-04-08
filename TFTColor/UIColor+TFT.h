@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define ColorWithRGBHex(hex)    [UIColor colorWithRGBHex:hex]
+
 @interface UIColor (TFT)
 
 + (UIColor *)colorWithRGBHex:(NSString *)hexCode;
