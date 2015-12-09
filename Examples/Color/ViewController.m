@@ -32,13 +32,13 @@
 
 - (IBAction)rgbHexTextChanged:(UITextField *)sender {
     
-    [viewRGBHex setBackgroundColor:[UIColor colorWithRGBHex:sender.text]];
-    NSLog(@"%@", [UIColor hexStringForColor:viewRGBHex.backgroundColor]);
+    [viewRGBHex setBackgroundColor:[UIColor colorWithRGBHexString:sender.text alpha:1.0]];
+    NSLog(@"%@", [UIColor rgbHexStringForColor:viewRGBHex.backgroundColor]);
 }
 
 - (IBAction)cmykHexTextChanged:(UITextField *)sender {
     
-    [viewCMYKHex setBackgroundColor:[UIColor colorWithCMYKHex:sender.text]];
+    [viewCMYKHex setBackgroundColor:[UIColor colorWithRGBHexString:sender.text alpha:1.0]];
 }
 
 - (IBAction)cyanTextChanged:(UITextField *)sender {
