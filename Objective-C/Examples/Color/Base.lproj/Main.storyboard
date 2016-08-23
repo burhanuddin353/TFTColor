@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="RGB Hex Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="91X-FJ-voE">
+                                <rect key="frame" x="16" y="20" width="154" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="rgbHexTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Vcc-nK-lPd"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="eZt-hz-RNr"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MlR-3J-5q6" userLabel="RGB Hex Color">
+                                <rect key="frame" x="191" y="20" width="113" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="CMYK Hex Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-N5-FhD">
+                                <rect key="frame" x="16" y="58" width="154" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="cmykHexTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="5Wu-oN-nNy"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="QuV-8n-3AI"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXs-DL-15E" userLabel="CMYK Hex Color">
+                                <rect key="frame" x="191" y="58" width="113" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Cyan" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bUd-rd-dZK">
+                                <rect key="frame" x="16" y="96" width="65" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="cyanTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="xTd-n5-z5o"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="axH-JU-ZZi"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhr-Fj-faD" userLabel="CMYK Color">
+                                <rect key="frame" x="16" y="134" width="280" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Yellow" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XnY-z6-ydh">
+                                <rect key="frame" x="166" y="96" width="65" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="yellowTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="p2L-3P-KuM"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="6AY-AQ-t7r"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Black" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srp-x0-gh9">
+                                <rect key="frame" x="239" y="96" width="65" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="blackTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="hai-ja-sW2"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="m35-2n-hVi"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Magenta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlq-bw-LHO">
+                                <rect key="frame" x="89" y="96" width="65" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="magentaTextChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="DxT-74-8Rx"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="gjC-ry-zFq"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="viewCMYK" destination="Uhr-Fj-faD" id="B0h-lR-HVV"/>
+                        <outlet property="viewCMYKHex" destination="iXs-DL-15E" id="vjc-YK-bQn"/>
+                        <outlet property="viewRGBHex" destination="MlR-3J-5q6" id="zri-KG-Isy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="141"/>
+        </scene>
+    </scenes>
+</document>
