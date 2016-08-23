@@ -34,7 +34,7 @@ A simple UIColor category to get UIColor object from RGB hex string, RGB hex val
 
 #### Get UIColor from CMYK component values
 ``` 
-+ [UIColor colorWithCyan:0.5f magenta:0.5 yellow:0.5f black:0.5f alpha:1.0f];
+[UIColor colorWithCyan:0.5f magenta:0.5 yellow:0.5f black:0.5f alpha:1.0f];
 ``` 
 Creates and returns a color object using the specified opacity and CMYK component values.
 The components of the color object, specified as a value from 0.0 to 1.0.
