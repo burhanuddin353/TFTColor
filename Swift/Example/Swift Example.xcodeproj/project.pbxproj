@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		443352791D6AF51A0071DAA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443352761D6AF51A0071DAA9 /* AppDelegate.swift */; };
-		4433527A1D6AF51A0071DAA9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 443352771D6AF51A0071DAA9 /* Info.plist */; };
 		4433527B1D6AF51A0071DAA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443352781D6AF51A0071DAA9 /* ViewController.swift */; };
 		443352831D6AF5B70071DAA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443352821D6AF5B70071DAA9 /* Assets.xcassets */; };
 		443352881D6AF61A0071DAA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443352841D6AF61A0071DAA9 /* LaunchScreen.storyboard */; };
 		443352891D6AF61A0071DAA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443352861D6AF61A0071DAA9 /* Main.storyboard */; };
-		4433528F1D6AF67F0071DAA9 /* TFTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433528E1D6AF67F0071DAA9 /* TFTColor.swift */; };
+		447D9F6C1D7FEFB3008DBB2D /* TFTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D9F6B1D7FEFB3008DBB2D /* TFTColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,7 @@
 		443352821D6AF5B70071DAA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Color/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		443352851D6AF61A0071DAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Color/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		443352871D6AF61A0071DAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Color/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		4433528E1D6AF67F0071DAA9 /* TFTColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TFTColor.swift; path = Color/TFTColor.swift; sourceTree = SOURCE_ROOT; };
+		447D9F6B1D7FEFB3008DBB2D /* TFTColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +59,22 @@
 				443352761D6AF51A0071DAA9 /* AppDelegate.swift */,
 				443352771D6AF51A0071DAA9 /* Info.plist */,
 				443352781D6AF51A0071DAA9 /* ViewController.swift */,
-				4433528E1D6AF67F0071DAA9 /* TFTColor.swift */,
+				447D9F6A1D7FEFB3008DBB2D /* TFTColor */,
 				443352821D6AF5B70071DAA9 /* Assets.xcassets */,
 				443352841D6AF61A0071DAA9 /* LaunchScreen.storyboard */,
 				443352861D6AF61A0071DAA9 /* Main.storyboard */,
 			);
 			name = Color;
 			path = "Swift Example";
+			sourceTree = "<group>";
+		};
+		447D9F6A1D7FEFB3008DBB2D /* TFTColor */ = {
+			isa = PBXGroup;
+			children = (
+				447D9F6B1D7FEFB3008DBB2D /* TFTColor.swift */,
+			);
+			name = TFTColor;
+			path = ../../TFTColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +103,7 @@
 		440A272F1C1855330037C385 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Burhanuddin Sunelwala";
 				TargetAttributes = {
 					440A27361C1855330037C385 = {
@@ -128,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				443352881D6AF61A0071DAA9 /* LaunchScreen.storyboard in Resources */,
-				4433527A1D6AF51A0071DAA9 /* Info.plist in Resources */,
 				443352831D6AF5B70071DAA9 /* Assets.xcassets in Resources */,
 				443352891D6AF61A0071DAA9 /* Main.storyboard in Resources */,
 			);
@@ -143,7 +150,7 @@
 			files = (
 				4433527B1D6AF51A0071DAA9 /* ViewController.swift in Sources */,
 				443352791D6AF51A0071DAA9 /* AppDelegate.swift in Sources */,
-				4433528F1D6AF67F0071DAA9 /* TFTColor.swift in Sources */,
+				447D9F6C1D7FEFB3008DBB2D /* TFTColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +189,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -226,8 +235,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -246,6 +257,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

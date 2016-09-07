@@ -86,16 +86,16 @@ extension UIColor {
     
     //MARK: Public Methods
     //MARK: RGB
-    static func colorWithRGB(hexString: String, alpha: Float) -> UIColor {
+    static func color(rgbHexString: String, alpha: Float) -> UIColor {
         
-        var hex = hexString
+        var hex = rgbHexString
         
         UIColor.clean(&hex, expectedLength: 6)
-        return UIColor.colorWithRGB(hexValue: UIColor.hexValue(from: hex), alpha: alpha);
+        return UIColor.color(rgbHexValue: UIColor.hexValue(from: hex), alpha: alpha);
     }
     
-    static func colorWithRGB(hexValue: UInt32, alpha: Float) -> UIColor {
-        return UIColor(red: CGFloat((hexValue & 0xFF0000) >> 16)/255.0, green: CGFloat((hexValue & 0xFF00) >> 8)/255.0, blue: CGFloat(hexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
+    static func color(rgbHexValue: UInt32, alpha: Float) -> UIColor {
+        return UIColor(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255.0, green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255.0, blue: CGFloat(rgbHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
     }
     
     static func rgbHexString(for color: UIColor) -> String {
@@ -128,15 +128,16 @@ extension UIColor {
         let blue = (1 - yellow) * (1 - black)
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
-    static func colorWithCMYK(hexString: inout String, alpha: Float) -> UIColor {
+    
+    static func color(cmykHexString: inout String, alpha: Float) -> UIColor {
         
-        UIColor.clean(&hexString, expectedLength: 8)
-        return UIColor.colorWithCMYK(hexValue: UIColor.hexValue(from: hexString), alpha: alpha);
+        UIColor.clean(&cmykHexString, expectedLength: 8)
+        return UIColor.color(cmykHexValue: UIColor.hexValue(from: cmykHexString), alpha: alpha);
     }
     
-    static func colorWithCMYK(hexValue: UInt32, alpha: Float) -> UIColor {
+    static func color(cmykHexValue: UInt32, alpha: Float) -> UIColor {
         
-        return UIColor(cyan: CGFloat((hexValue & 0xFF000000) >> 32)/255.0, magenta: CGFloat((hexValue & 0xFF0000) >> 16)/255.0, yellow: CGFloat((hexValue & 0xFF00) >> 8)/255.0, black: CGFloat(hexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
+        return UIColor(cyan: CGFloat((cmykHexValue & 0xFF000000) >> 32)/255.0, magenta: CGFloat((cmykHexValue & 0xFF0000) >> 16)/255.0, yellow: CGFloat((cmykHexValue & 0xFF00) >> 8)/255.0, black: CGFloat(cmykHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
     }
     
     static func cmykHexString(for color: UIColor) -> String {

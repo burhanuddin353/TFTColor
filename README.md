@@ -71,15 +71,15 @@ The components of the color object, specified as a value from 0.0 to 1.0.
 #### Get UIColor from RGB Hex String
 
 ```
-UIColor.colorWithRGB(hexString: "FF34AE" alpha: 1.0)
-UIColor.colorWithRGB(hexString: "#ea" alpha: 1.0)
+UIColor.color(rgbHexString: "FF34AE" alpha: 1.0)
+UIColor.color(rgbHexString: "#ea" alpha: 1.0)
 ```
 
 #### Get UIColor from RGB Hex Value
 
 
 ```
-UIColor.colorWithRGB(hexValue: 0xFF34AE alpha: 1.0)
+UIColor.color(rgbHexValue: 0xFF34AE alpha: 1.0)
 ```
 #### Get RGB Hex String from UIColor
 
@@ -105,15 +105,15 @@ The components of the color object, specified as a value from 0.0 to 1.0.
 
  
 ``` 
-UIColor.colorWithCMYK(hexString: "FF34AE34" alpha:1.0)
-UIColor.colorWithCMYK(hexString: "#ea" alpha:1.0)
+UIColor.color(cmykHexString: "FF34AE34" alpha:1.0)
+UIColor.color(cmykHexString: "#ea" alpha:1.0)
 ``` 
 
 #### Get UIColor from CMYK Hex Value
 
  
 ``` 
-UIColor.colorWithCMYK(hexValue: 0xFF34AE34 alpha:1.0f)
+UIColor.color(cmykHexValue: 0xFF34AE34 alpha:1.0f)
 ``` 
 
 #### Get CMYK Hex String from UIColor
