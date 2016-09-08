@@ -57,8 +57,7 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 ## Usage example
 **Swift**
 
-```
-
+```swift
 // Get UIColor from RGB Hex String
 UIColor(rgbHexString: "FF34AE", alpha: 1.0)
 UIColor(rgbHexString: "#ea", alpha: 1.0)
@@ -94,7 +93,7 @@ redColor.cmykHexValue //This will return 0x00646400
 
 **Objective-C**
 
-```
+```objc
 // Get UIColor from RGB Hex String
 [UIColor colorWithRGBHexString:@"FF34AE" alpha:1.0f];
 [UIColor colorWithRGBHexString:@"#ea" alpha:1.0f];
