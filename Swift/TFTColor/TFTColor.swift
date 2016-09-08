@@ -88,9 +88,7 @@ extension UIColor {
     //MARK: RGB
     convenience init(rgbHexString: String, alpha: Float) {
         
-        var hex = rgbHexString
-        
-        UIColor.clean(&hex, expectedLength: 6)
+        UIColor.clean(&rgbHexString, expectedLength: 6)
         self.init(rgbHexValue: UIColor.hexValue(from: hex), alpha: alpha)
     }
     

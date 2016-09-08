@@ -51,6 +51,7 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 **Objective-C**
 
 1. Download and drop ```TFTColor.h``` & ```TFTColor.m``` in your project.  
+
 2. Congratulations! 
 
 
@@ -146,5 +147,3 @@ Distributed under the **The MIT License (MIT)** license. See ``LICENSE`` for mor
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
 [codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
-[awesome-ios]: https://github.com/vsouza/awesome-ios
-[awesome-ios-image]: https://img.shields.io/badge/Awesome-iOS-blue.svg
