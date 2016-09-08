@@ -13,6 +13,7 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 - [x] Get CMYK Hex String/Value from UIColor
 - [x] Initialize CMYK from its base components
 
+
 * The beautiful part of this library is that you can input Hex values with `#`, `0x` or `0X` and the it will take care of this.
 * Also you can input hex value of any length and this will be handled.
 * The library also takes care of non-hex characters.
@@ -50,7 +51,6 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 **Objective-C**
 
 1. Download and drop ```TFTColor.h``` & ```TFTColor.m``` in your project.  
-
 2. Congratulations! 
 
 
