@@ -50,10 +50,10 @@ extension UIColor {
         }
     }
     
-    private static func hexValue(from hexString: String) -> UInt32 {
+    private static func hexValue(from hexString: String) -> UInt64 {
         
-        var hexValue: UInt32 = 0
-        Scanner(string: hexString).scanHexInt32(&hexValue)
+        var hexValue: UInt64 = 0
+        Scanner(string: hexString).scanHexInt64(&hexValue)
         return hexValue
     }
     
@@ -88,11 +88,12 @@ extension UIColor {
     //MARK: RGB
     convenience init(rgbHexString: String, alpha: Float) {
         
+        var rgbHexString = rgbHexString
         UIColor.clean(&rgbHexString, expectedLength: 6)
-        self.init(rgbHexValue: UIColor.hexValue(from: hex), alpha: alpha)
+        self.init(rgbHexValue: UIColor.hexValue(from: rgbHexString), alpha: alpha)
     }
     
-    convenience init(rgbHexValue: UInt32, alpha: Float) {
+    convenience init(rgbHexValue: UInt64, alpha: Float) {
         self.init(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255.0, green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255.0, blue: CGFloat(rgbHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
     }
     
@@ -125,13 +126,14 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    convenience init(cmykHexString: inout String, alpha: Float) {
+    convenience init(cmykHexString: String, alpha: Float) {
         
+        var cmykHexString = cmykHexString
         UIColor.clean(&cmykHexString, expectedLength: 8)
         self.init(cmykHexValue: UIColor.hexValue(from: cmykHexString), alpha: alpha);
     }
     
-    convenience init(cmykHexValue: UInt32, alpha: Float) {
+    convenience init(cmykHexValue: UInt64, alpha: Float) {
         
         self.init(cyan: CGFloat((cmykHexValue & 0xFF000000) >> 32)/255.0, magenta: CGFloat((cmykHexValue & 0xFF0000) >> 16)/255.0, yellow: CGFloat((cmykHexValue & 0xFF00) >> 8)/255.0, black: CGFloat(cmykHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
     }
@@ -145,14 +147,14 @@ extension UIColor {
         return hexString
     }
     
-    var cmykHexValue: UInt {
+    var cmykHexValue: UInt64 {
         
         let cmykValues = cmykComponents
-        var hexValue: UInt = 0
-        hexValue |= UInt(cmykValues[0] * 255) << 32
-        hexValue |= UInt(cmykValues[1] * 255) << 16
-        hexValue |= UInt(cmykValues[2] * 255) << 8
-        hexValue |= UInt(cmykValues[2] * 255)
+        var hexValue: UInt64 = 0
+        hexValue |= UInt64(cmykValues[0] * 255) << 32
+        hexValue |= UInt64(cmykValues[1] * 255) << 16
+        hexValue |= UInt64(cmykValues[2] * 255) << 8
+        hexValue |= UInt64(cmykValues[2] * 255)
         
         return hexValue
     }
