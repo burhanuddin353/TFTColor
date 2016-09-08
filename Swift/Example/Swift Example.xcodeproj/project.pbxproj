@@ -12,7 +12,7 @@
 		443352831D6AF5B70071DAA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443352821D6AF5B70071DAA9 /* Assets.xcassets */; };
 		443352881D6AF61A0071DAA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443352841D6AF61A0071DAA9 /* LaunchScreen.storyboard */; };
 		443352891D6AF61A0071DAA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443352861D6AF61A0071DAA9 /* Main.storyboard */; };
-		447D9F6C1D7FEFB3008DBB2D /* TFTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D9F6B1D7FEFB3008DBB2D /* TFTColor.swift */; };
+		4499945F1D81258E00BC9665 /* TFTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4499945E1D81258E00BC9665 /* TFTColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		443352821D6AF5B70071DAA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Color/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		443352851D6AF61A0071DAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Color/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		443352871D6AF61A0071DAA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Color/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
-		447D9F6B1D7FEFB3008DBB2D /* TFTColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTColor.swift; sourceTree = "<group>"; };
+		4499945E1D81258E00BC9665 /* TFTColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFTColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 		447D9F6A1D7FEFB3008DBB2D /* TFTColor */ = {
 			isa = PBXGroup;
 			children = (
-				447D9F6B1D7FEFB3008DBB2D /* TFTColor.swift */,
+				4499945E1D81258E00BC9665 /* TFTColor.swift */,
 			);
 			name = TFTColor;
 			path = ../../TFTColor;
@@ -150,7 +150,7 @@
 			files = (
 				4433527B1D6AF51A0071DAA9 /* ViewController.swift in Sources */,
 				443352791D6AF51A0071DAA9 /* AppDelegate.swift in Sources */,
-				447D9F6C1D7FEFB3008DBB2D /* TFTColor.swift in Sources */,
+				4499945F1D81258E00BC9665 /* TFTColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -254,6 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;

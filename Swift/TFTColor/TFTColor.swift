@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     
     //MARK: Private Helper Methods
-    static func clean(_ hexString: inout String, expectedLength: Int) {
+    private static func clean(_ hexString: inout String, expectedLength: Int) {
         
         if hexString.hasPrefix("#") {
             hexString.remove(at: hexString.startIndex)
@@ -50,31 +50,31 @@ extension UIColor {
         }
     }
     
-    static func hexValue(from hexString: String) -> UInt32 {
+    private static func hexValue(from hexString: String) -> UInt32 {
         
         var hexValue: UInt32 = 0
         Scanner(string: hexString).scanHexInt32(&hexValue)
         return hexValue
     }
     
-    static func rgbComponents(for color: UIColor) -> [CGFloat] {
+    private var rgbComponents: [CGFloat] {
         
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue: CGFloat = 0.0
         var alpha: CGFloat = 0.0
-        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         
         return [red, green, blue]
     }
     
-    static func cmykComponents(for color: UIColor) -> [CGFloat] {
+    private var cmykComponents: [CGFloat] {
         
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue: CGFloat = 0.0
         var alpha: CGFloat = 0.0
-        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         
         let black = 1 - max(max(red, green), blue)
         let cyan =  (1 - red - black) / (1 - black)
@@ -86,36 +86,34 @@ extension UIColor {
     
     //MARK: Public Methods
     //MARK: RGB
-    static func color(rgbHexString: String, alpha: Float) -> UIColor {
+    convenience init(rgbHexString: String, alpha: Float) {
         
         var hex = rgbHexString
         
         UIColor.clean(&hex, expectedLength: 6)
-        return UIColor.color(rgbHexValue: UIColor.hexValue(from: hex), alpha: alpha);
+        self.init(rgbHexValue: UIColor.hexValue(from: hex), alpha: alpha)
     }
     
-    static func color(rgbHexValue: UInt32, alpha: Float) -> UIColor {
-        return UIColor(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255.0, green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255.0, blue: CGFloat(rgbHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
+    convenience init(rgbHexValue: UInt32, alpha: Float) {
+        self.init(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255.0, green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255.0, blue: CGFloat(rgbHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
     }
     
-    static func rgbHexString(for color: UIColor) -> String {
+    var rgbHexString: String {
         
-        let rgbComponents = UIColor.rgbComponents(for: color)
         var hexString = ""
         for component in rgbComponents {
-            hexString.append(String(format: "%02x", arguments: [component * 255]))
+            hexString.append(String(UInt(component * 255), radix: 16))
         }
-        
         return hexString
     }
     
-    static func rgbHexValue(for color: UIColor) -> UInt {
+    var rgbHexValue: UInt {
         
-        let rgbComponents = UIColor.rgbComponents(for: color)
+        let rgbValues = rgbComponents
         var hexValue: UInt = 0
-        hexValue += UInt(rgbComponents[0] * 255) * 0xFFFFFF
-        hexValue += UInt(rgbComponents[1] * 255) * 0xFFFF
-        hexValue += UInt(rgbComponents[2] * 255) * 0xFF
+        hexValue |= (UInt(rgbValues[0] * 255) << 16)
+        hexValue |= (UInt(rgbValues[1] * 255) << 8)
+        hexValue |= UInt(rgbValues[2] * 255)
         
         return hexValue
     }
@@ -129,36 +127,34 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    static func color(cmykHexString: inout String, alpha: Float) -> UIColor {
+    convenience init(cmykHexString: inout String, alpha: Float) {
         
         UIColor.clean(&cmykHexString, expectedLength: 8)
-        return UIColor.color(cmykHexValue: UIColor.hexValue(from: cmykHexString), alpha: alpha);
+        self.init(cmykHexValue: UIColor.hexValue(from: cmykHexString), alpha: alpha);
     }
     
-    static func color(cmykHexValue: UInt32, alpha: Float) -> UIColor {
+    convenience init(cmykHexValue: UInt32, alpha: Float) {
         
-        return UIColor(cyan: CGFloat((cmykHexValue & 0xFF000000) >> 32)/255.0, magenta: CGFloat((cmykHexValue & 0xFF0000) >> 16)/255.0, yellow: CGFloat((cmykHexValue & 0xFF00) >> 8)/255.0, black: CGFloat(cmykHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
+        self.init(cyan: CGFloat((cmykHexValue & 0xFF000000) >> 32)/255.0, magenta: CGFloat((cmykHexValue & 0xFF0000) >> 16)/255.0, yellow: CGFloat((cmykHexValue & 0xFF00) >> 8)/255.0, black: CGFloat(cmykHexValue & 0xFF)/255.0, alpha: CGFloat(alpha))
     }
     
-    static func cmykHexString(for color: UIColor) -> String {
+    var cmykHexString: String {
         
-        let cmykComponents = UIColor.cmykComponents(for: color)
         var hexString = ""
         for component in cmykComponents {
-            hexString.append(String(format: "%02x", arguments: [component * 255]))
+            hexString.append(String(UInt(component * 255), radix: 16))
         }
-        
         return hexString
     }
     
-    static func cmykHexValue(for color: UIColor) -> UInt {
+    var cmykHexValue: UInt {
         
-        let cmykComponents = UIColor.cmykComponents(for: color)
+        let cmykValues = cmykComponents
         var hexValue: UInt = 0
-        hexValue += UInt(cmykComponents[0] * 255) & 0xFFFFFFFF
-        hexValue += UInt(cmykComponents[1] * 255) & 0xFFFFFF
-        hexValue += UInt(cmykComponents[2] * 255) & 0xFFFF
-        hexValue += UInt(cmykComponents[2] * 255) & 0xFF
+        hexValue |= UInt(cmykValues[0] * 255) << 32
+        hexValue |= UInt(cmykValues[1] * 255) << 16
+        hexValue |= UInt(cmykValues[2] * 255) << 8
+        hexValue |= UInt(cmykValues[2] * 255)
         
         return hexValue
     }

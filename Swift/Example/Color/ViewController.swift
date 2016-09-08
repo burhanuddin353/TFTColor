@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.color(rgbHexString: "#353", alpha: 1.0)
+        view.backgroundColor = UIColor(rgbHexString: "#353", alpha: 1.0)
+        print("RGB Hex String "+view.backgroundColor!.rgbHexString)
+        print("RGB Hex Value \(view.backgroundColor!.rgbHexValue)")
+        print("CMYK Hex String "+view.backgroundColor!.cmykHexString)
+        print("CMYK Hex Value \(view.backgroundColor!.cmykHexValue)")
     }
 }
+
 
