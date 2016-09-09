@@ -52,8 +52,7 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 
 **Objective-C**
 
-1. Download and drop ```TFTColor.h``` & ```TFTColor.m``` in your project.  
-
+1. Download and drop ```TFTColor.h``` & ```TFTColor.m``` in your project. 
 2. Congratulations! 
 
 
@@ -61,72 +60,72 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 **Swift**
 
 ```swift
-// Get UIColor from RGB Hex String
+// UIColor from RGB Hex String
 UIColor(rgbHexString: "FF34AE", alpha: 1.0)
 UIColor(rgbHexString: "#ea", alpha: 1.0)
 
-// Get UIColor from RGB Hex Value
+// UIColor from RGB Hex Value
 UIColor(rgbHexValue: 0xFF34AE alpha: 1.0)
 
-// Get RGB Hex String from UIColor
+// RGB Hex String from UIColor
 let redColor = UIColor.redColor
-redColor.rgbHexString //This will return @"FF0000"
+redColor.rgbHexString //@"FF0000"
 
-// Get RGB Hex Value from UIColor
-redColor.rgbHexValue //This will return 0xFF0000
+// RGB Hex Value from UIColor
+redColor.rgbHexValue //0xFF0000
 
-// Get UIColor from CMYK component values 
+// UIColor from CMYK component values 
 // Creates and returns a color object using the specified opacity and CMYK component values.
 // The components of the color object, specified as a value from 0.0 to 1.0.
 UIColor(cyan:0.5, magenta: 0.5, yellow: 0.5, black: 0.5, alpha: 1.0)
 
-// Get UIColor from CMYK Hex String
+// UIColor from CMYK Hex String
 UIColor(cmykHexString: "FF34AE34", alpha:1.0)
 UIColor(cmykHexString: "#ea", alpha:1.0)
 
-// Get UIColor from CMYK Hex Value
+// UIColor from CMYK Hex Value
 UIColor(cmykHexValue: 0xFF34AE34 alpha:1.0f)
 
-// Get CMYK Hex String from UIColor
-redColor.cmykHexString //This will return @"00646400"
+// CMYK Hex String from UIColor
+redColor.cmykHexString //@"00646400"
 
-// Get CMYK Hex Value from UIColor
-redColor.cmykHexValue //This will return 0x00646400
+// CMYK Hex Value from UIColor
+redColor.cmykHexValue //0x00646400
 ``` 
 
 **Objective-C**
 
 ```objc
-// Get UIColor from RGB Hex String
+// UIColor from RGB Hex String
 [UIColor colorWithRGBHexString:@"FF34AE" alpha:1.0f];
 [UIColor colorWithRGBHexString:@"#ea" alpha:1.0f];
 
-// Get UIColor from RGB Hex Value
+// UIColor from RGB Hex Value
 [UIColor colorWithRGBHexValue:0xFF34AE alpha:1.0f];
  
-// Get RGB Hex String from UIColor
-[UIColor rgbHexStringForColor:[UIColor redColor]]; //This will return @"FF0000"
+// RGB Hex String from UIColor
+[UIColor rgbHexStringForColor:[UIColor redColor]]; //@"FF0000"
  
-// Get RGB Hex Value from UIColor
-[UIColor rgbHexValueForColor:[UIColor redColor]]; //This will return 0xFF0000
+// RGB Hex Value from UIColor
+[UIColor rgbHexValueForColor:[UIColor redColor]]; /0xFF0000
 
-// Get UIColor from CMYK component values
+// UIColor from CMYK component values
 // Creates and returns a color object using the specified opacity and CMYK component values.
 // The components of the color object, specified as a value from 0.0 to 1.0.
 [UIColor colorWithCyan:0.5f magenta:0.5 yellow:0.5f black:0.5f alpha:1.0f];
 
-// Get UIColor from CMYK Hex String
+// UIColor from CMYK Hex String
 [UIColor colorWithCMYKHexString:@"FF34AE34" alpha:1.0f];
 [UIColor colorWithCMYKHexString:@"#EA" alpha:1.0f]; 
 
-// Get UIColor from CMYK Hex Value
+// UIColor from CMYK Hex Value
 [UIColor colorWithCMYKHexValue:0xFF34AE34 alpha:1.0f];
 
-// Get CMYK Hex String from UIColor
-[UIColor cmykHexStringForColor:[UIColor redColor]]; //This will return @"00646400" 
+// CMYK Hex String from UIColor
+[UIColor cmykHexStringForColor:[UIColor redColor]]; //@"00646400" 
 
-// Get CMYK Hex Value from UIColor
-[UIColor cmykHexValueForColor:[UIColor redColor]]; //This will return 0x00646400
+// CMYK Hex Value from UIColor
+[UIColor cmykHexValueForColor:[UIColor redColor]]; //0x00646400
 ``` 
 
 ## Contribute
@@ -141,7 +140,7 @@ Distributed under the **The MIT License (MIT)** license. See ``LICENSE`` for mor
 
 [https://github.com/burhanuddin353/TFTColor](https://github.com/burhanuddin353/TFTColor)
 
-[swift-image]: https://img.shields.io/badge/swift-2.3-orange.svg
+[swift-image]: https://img.shields.io/badge/swift-3.0-orange.svg
 [swift-url]: https://swift.org/
 [objc-image]: https://img.shields.io/badge/Objective-C-purple.svg
 [objc-url]: https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html

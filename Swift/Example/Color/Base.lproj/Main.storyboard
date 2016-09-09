@@ -36,7 +36,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="zvo-yf-Iyd"/>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="q1J-TY-qXT"/>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="m77-lC-iAv"/>
                                                         </connections>
                                                     </textField>
@@ -57,7 +57,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="4gk-D9-94a"/>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="n58-nU-ZTa"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -84,7 +84,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
-                                                            <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="yeL-ws-yv6"/>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="ROy-IO-WJe"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -104,6 +104,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="LMg-rQ-qie"/>
                                                             <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="xeT-GM-u16"/>
                                                         </connections>
                                                     </textField>
@@ -124,6 +125,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Dc9-97-0wy"/>
                                                             <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="CM1-Ld-MhS"/>
                                                         </connections>
                                                     </textField>
@@ -151,6 +153,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="Iy8-nR-nNJ"/>
                                                             <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="eia-WI-MmY"/>
                                                         </connections>
                                                     </textField>
@@ -171,6 +174,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="2zU-v0-fz7"/>
                                                             <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="xG6-Cv-sf1"/>
                                                         </connections>
                                                     </textField>
@@ -191,6 +195,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="qHZ-CP-560"/>
                                                             <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="XJv-TF-K9A"/>
                                                         </connections>
                                                     </textField>
@@ -211,6 +216,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <connections>
+                                                            <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="vGD-sB-1Ii"/>
                                                             <action selector="didChangeWithTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kvt-zu-IAa"/>
                                                         </connections>
                                                     </textField>

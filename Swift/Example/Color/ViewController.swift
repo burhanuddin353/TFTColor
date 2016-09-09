@@ -26,20 +26,67 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func didChange(textField: UITextField) {
+    @IBAction func didChange(_ textField: UITextField) {
         
-        switch textField {
+        if let text = textField.text {
             
-        case rgbHexTextField:
-            colorView.backgroundColor = UIColor(rgbHexString: textField.text!, alpha: 1.0)
-            
-        case cmykHexTextField:
-            colorView.backgroundColor = UIColor(cmykHexString: textField.text!, alpha: 1.0)
-            
-            // case redTextField, greenTextField, yellowTextField:
-        //colorView.backgroundColor = UIColor(red: Int(redTextField.text!)/255.0, green: Int(redTextField.text!)/255.0, blue: Int(redTextField.text!)/255.0, alpha: 1.0)
-        default:
-            colorView.backgroundColor = UIColor.white
+            switch textField {
+                
+            case rgbHexTextField:
+                colorView.backgroundColor = UIColor(rgbHexString: text, alpha: 1.0)
+                cmykHexTextField.text = colorView.backgroundColor?.cmykHexString
+                
+                redTextField.text = "\(colorView.backgroundColor!.red)"
+                greenTextField.text = "\(colorView.backgroundColor!.green)"
+                blueTextField.text = "\(colorView.backgroundColor!.blue)"
+                
+                cyanTextField.text = "\(colorView.backgroundColor!.cyan)"
+                magentaTextField.text = "\(colorView.backgroundColor!.magenta)"
+                yellowTextField.text = "\(colorView.backgroundColor!.yellow)"
+                blackTextField.text = "\(colorView.backgroundColor!.black)"
+                
+            case cmykHexTextField:
+                colorView.backgroundColor = UIColor(cmykHexString: text, alpha: 1.0)
+                rgbHexTextField.text = colorView.backgroundColor?.rgbHexString
+                
+                redTextField.text = "\(colorView.backgroundColor!.red)"
+                greenTextField.text = "\(colorView.backgroundColor!.green)"
+                blueTextField.text = "\(colorView.backgroundColor!.blue)"
+                
+                cyanTextField.text = "\(colorView.backgroundColor!.cyan)"
+                magentaTextField.text = "\(colorView.backgroundColor!.magenta)"
+                yellowTextField.text = "\(colorView.backgroundColor!.yellow)"
+                blackTextField.text = "\(colorView.backgroundColor!.black)"
+                
+            case redTextField, greenTextField, blueTextField:
+                colorView.backgroundColor = UIColor(red: CGFloat(Float(redTextField.text!) ?? 0)/255.0,
+                                                    green: CGFloat(Float(greenTextField.text!) ?? 0)/255.0,
+                                                    blue: CGFloat(Float(blueTextField.text!) ?? 0)/255.0,
+                                                    alpha: 1.0)
+                cmykHexTextField.text = colorView.backgroundColor?.cmykHexString
+                rgbHexTextField.text = colorView.backgroundColor?.rgbHexString
+                
+                cyanTextField.text = "\(colorView.backgroundColor!.cyan)"
+                magentaTextField.text = "\(colorView.backgroundColor!.magenta)"
+                yellowTextField.text = "\(colorView.backgroundColor!.yellow)"
+                blackTextField.text = "\(colorView.backgroundColor!.black)"
+                
+            case cyanTextField, magentaTextField, yellowTextField, blackTextField:
+                colorView.backgroundColor = UIColor(cyan: (Float(cyanTextField.text!) ?? 0)/255.0,
+                                                    magenta: (Float(magentaTextField.text!) ?? 0)/255.0,
+                                                    yellow: (Float(yellowTextField.text!) ?? 0)/255.0,
+                                                    black: (Float(blackTextField.text!) ?? 0)/255.0,
+                                                    alpha: 1.0)
+                cmykHexTextField.text = colorView.backgroundColor?.cmykHexString
+                rgbHexTextField.text = colorView.backgroundColor?.rgbHexString
+                
+                redTextField.text = "\(colorView.backgroundColor!.red)"
+                greenTextField.text = "\(colorView.backgroundColor!.green)"
+                blueTextField.text = "\(colorView.backgroundColor!.blue)"
+                
+            default:
+                colorView.backgroundColor = UIColor.white
+            }
         }
     }
 }
