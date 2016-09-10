@@ -24,6 +24,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rgbHexTextField.text = "#353"
+        colorView.backgroundColor = UIColor(rgbHexString: rgbHexTextField.text!, alpha: 1.0)
+        cmykHexTextField.text = colorView.backgroundColor?.cmykHexString
+        
+        redTextField.text = "\(colorView.backgroundColor!.red)"
+        greenTextField.text = "\(colorView.backgroundColor!.green)"
+        blueTextField.text = "\(colorView.backgroundColor!.blue)"
+        
+        cyanTextField.text = "\(colorView.backgroundColor!.cyan)"
+        magentaTextField.text = "\(colorView.backgroundColor!.magenta)"
+        yellowTextField.text = "\(colorView.backgroundColor!.yellow)"
+        blackTextField.text = "\(colorView.backgroundColor!.black)"
     }
     
     @IBAction func didChange(_ textField: UITextField) {
@@ -34,7 +46,7 @@ class ViewController: UIViewController {
                 
             case rgbHexTextField:
                 colorView.backgroundColor = UIColor(rgbHexString: text, alpha: 1.0)
-                cmykHexTextField.text = colorView.backgroundColor?.cmykHexString
+                cmykHexTextField.text = colorView.backgroundColor!.cmykHexString
                 
                 redTextField.text = "\(colorView.backgroundColor!.red)"
                 greenTextField.text = "\(colorView.backgroundColor!.green)"
@@ -47,7 +59,7 @@ class ViewController: UIViewController {
                 
             case cmykHexTextField:
                 colorView.backgroundColor = UIColor(cmykHexString: text, alpha: 1.0)
-                rgbHexTextField.text = colorView.backgroundColor?.rgbHexString
+                rgbHexTextField.text = colorView.backgroundColor!.rgbHexString
                 
                 redTextField.text = "\(colorView.backgroundColor!.red)"
                 greenTextField.text = "\(colorView.backgroundColor!.green)"
@@ -63,8 +75,8 @@ class ViewController: UIViewController {
                                                     green: CGFloat(Float(greenTextField.text!) ?? 0)/255.0,
                                                     blue: CGFloat(Float(blueTextField.text!) ?? 0)/255.0,
                                                     alpha: 1.0)
-                cmykHexTextField.text = colorView.backgroundColor?.cmykHexString
-                rgbHexTextField.text = colorView.backgroundColor?.rgbHexString
+                cmykHexTextField.text = colorView.backgroundColor!.cmykHexString
+                rgbHexTextField.text = colorView.backgroundColor!.rgbHexString
                 
                 cyanTextField.text = "\(colorView.backgroundColor!.cyan)"
                 magentaTextField.text = "\(colorView.backgroundColor!.magenta)"

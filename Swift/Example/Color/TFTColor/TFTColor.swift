@@ -63,20 +63,26 @@ extension UIColor {
         var green: CGFloat = 0.0
         var blue: CGFloat = 0.0
         var alpha: CGFloat = 0.0
-        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        red = min(1.0, red)
+        green = min(1.0, green)
+        blue = min(1.0, blue)
         
         return [red, green, blue]
     }
     
     fileprivate var cmykComponents: [CGFloat] {
         
-        var red: CGFloat = 0.0
-        var green: CGFloat = 0.0
-        var blue: CGFloat = 0.0
-        var alpha: CGFloat = 0.0
-        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        let red = rgbComponents[0]
+        let green = rgbComponents[1]
+        let blue = rgbComponents[2]
         
         let black = 1 - max(max(red, green), blue)
+        if black == 1 {
+            return [0.0, 0.0, 0.0, 1.0]
+        }
+        
         let cyan =  (1 - red - black) / (1 - black)
         let magenta =  (1 - green - black) / (1 - black)
         let yellow =  (1 - blue - black) / (1 - black)

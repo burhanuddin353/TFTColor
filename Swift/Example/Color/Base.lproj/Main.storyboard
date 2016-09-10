@@ -33,7 +33,7 @@
                                                             <constraint firstAttribute="width" constant="93" id="qfX-gN-ltf"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
                                                             <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="q1J-TY-qXT"/>
@@ -54,7 +54,7 @@
                                                             <constraint firstAttribute="width" constant="93" id="DiQ-ZI-dJx"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
                                                             <action selector="didChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="n58-nU-ZTa"/>
@@ -69,7 +69,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rOQ-lL-Z8I">
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xfr-ax-Poe">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xfr-ax-Poe">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRr-xw-wab">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -78,7 +78,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-UY-MQf">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="a8F-1u-iiL"/>
+                                                            <constraint firstAttribute="width" constant="45" id="a8F-1u-iiL"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -89,7 +89,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E0o-0o-UrF">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E0o-0o-UrF">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwy-qZ-iKM">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -98,7 +98,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4h-WO-gDN">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="dBE-2V-VWA"/>
+                                                            <constraint firstAttribute="width" constant="45" id="dBE-2V-VWA"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -110,7 +110,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d0n-lX-wIj">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="d0n-lX-wIj">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enw-gd-Fap">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -119,7 +119,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Knc-3J-SXC">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="WXL-sB-pXN"/>
+                                                            <constraint firstAttribute="width" constant="45" id="WXL-sB-pXN"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -132,13 +132,10 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="3se-ik-az8"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DqV-CZ-Pnn">
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oYq-Hr-TUe">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="oYq-Hr-TUe">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJu-bw-FVd">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -147,7 +144,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaF-KL-E64">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="GDq-1I-qrV"/>
+                                                            <constraint firstAttribute="width" constant="45" id="GDq-1I-qrV"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -159,7 +156,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dYC-w1-8VH">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dYC-w1-8VH">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKG-Gj-83r">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -168,7 +165,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5j-7a-KAF">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="Occ-Vp-NVh"/>
+                                                            <constraint firstAttribute="width" constant="45" id="Occ-Vp-NVh"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -180,7 +177,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B98-d6-QI0">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="B98-d6-QI0">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-Jx-Fgh">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -189,7 +186,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O7u-Bn-NYb">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="BF1-R8-tjX"/>
+                                                            <constraint firstAttribute="width" constant="45" id="BF1-R8-tjX"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -201,7 +198,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p0N-w4-uzd">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="p0N-w4-uzd">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HP-Db-HMx">
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -210,7 +207,7 @@
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eI-eh-vcD">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="52" id="nwx-OY-lz4"/>
+                                                            <constraint firstAttribute="width" constant="45" id="nwx-OY-lz4"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -223,9 +220,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="t0K-VE-tFx"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -236,7 +230,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="obo-pI-usO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="COc-4f-0Ws"/>
-                            <constraint firstItem="obo-pI-usO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="EMX-rt-6e5"/>
+                            <constraint firstItem="obo-pI-usO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EMX-rt-6e5"/>
                             <constraint firstItem="qWn-Dt-cSf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H1Q-cH-s9B"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qWn-Dt-cSf" secondAttribute="bottom" id="HBR-yK-LZm"/>
                             <constraint firstAttribute="trailing" secondItem="qWn-Dt-cSf" secondAttribute="trailing" id="Lib-u9-QEr"/>
