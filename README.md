@@ -7,6 +7,8 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 [![Objective C][objc-image]][objc-url]
 [![License][license-image]][license-url]
 
+![](Example.png)
+
 ## Features
 
 - [x] Convert RGB Hex String/Value to UIColor
@@ -69,7 +71,7 @@ UIColor(rgbHexValue: 0xFF34AE alpha: 1.0)
 
 // RGB Hex String from UIColor
 let redColor = UIColor.redColor
-redColor.rgbHexString //@"FF0000"
+redColor.rgbHexString //"FF0000"
 
 // RGB Hex Value from UIColor
 redColor.rgbHexValue //0xFF0000
@@ -87,7 +89,7 @@ UIColor(cmykHexString: "#ea", alpha:1.0)
 UIColor(cmykHexValue: 0xFF34AE34 alpha:1.0f)
 
 // CMYK Hex String from UIColor
-redColor.cmykHexString //@"00646400"
+redColor.cmykHexString //"00646400"
 
 // CMYK Hex Value from UIColor
 redColor.cmykHexValue //0x00646400
@@ -107,7 +109,7 @@ redColor.cmykHexValue //0x00646400
 [UIColor rgbHexStringForColor:[UIColor redColor]]; //@"FF0000"
  
 // RGB Hex Value from UIColor
-[UIColor rgbHexValueForColor:[UIColor redColor]]; /0xFF0000
+[UIColor rgbHexValueForColor:[UIColor redColor]]; //0xFF0000
 
 // UIColor from CMYK component values
 // Creates and returns a color object using the specified opacity and CMYK component values.
@@ -122,7 +124,7 @@ redColor.cmykHexValue //0x00646400
 [UIColor colorWithCMYKHexValue:0xFF34AE34 alpha:1.0f];
 
 // CMYK Hex String from UIColor
-[UIColor cmykHexStringForColor:[UIColor redColor]]; //@"00646400" 
+[UIColor cmykHexStringForColor:[UIColor redColor]]; //"00646400" 
 
 // CMYK Hex Value from UIColor
 [UIColor cmykHexValueForColor:[UIColor redColor]]; //0x00646400
