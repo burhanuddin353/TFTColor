@@ -6,8 +6,8 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 [![Swift Version][swift-image]][swift-url]
 [![Objective C][objc-image]][objc-url]
 [![License][license-image]][license-url]
- 
-![](Example.png =250x)
+
+<img src="https://github.com/burhanuddin353/TFTColor/blob/master/Example.png" width="375">
 
 ## Features
 
