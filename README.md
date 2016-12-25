@@ -7,7 +7,7 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 [![Objective C][objc-image]][objc-url]
 [![License][license-image]][license-url]
  
-<img src="Example.png" style="width: 320px;"/>
+<img src="Example.png" style="width: 375px;"/>
 
 ## Features
 
