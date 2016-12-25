@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let viewColor = colorView.backgroundColor!
-        
         rgbHexTextField.text = "#353"
         colorView.backgroundColor = UIColor(rgbHexString: rgbHexTextField.text!, alpha: 1.0)
+        let viewColor = colorView.backgroundColor!
+        
         cmykHexTextField.text = viewColor.cmykHexString
         
         redTextField.text = "\(viewColor.red)"
@@ -44,11 +44,11 @@ class ViewController: UIViewController {
         
         if let text = textField.text {
             
-            let viewColor = colorView.backgroundColor!
             switch textField {
                 
             case rgbHexTextField:
                 colorView.backgroundColor = UIColor(rgbHexString: text, alpha: 1.0)
+                let viewColor = colorView.backgroundColor!
                 cmykHexTextField.text = viewColor.cmykHexString
                 
                 redTextField.text = "\(viewColor.red)"
@@ -62,6 +62,7 @@ class ViewController: UIViewController {
                 
             case cmykHexTextField:
                 colorView.backgroundColor = UIColor(cmykHexString: text, alpha: 1.0)
+                let viewColor = colorView.backgroundColor!
                 rgbHexTextField.text = viewColor.rgbHexString
                 
                 redTextField.text = "\(viewColor.red)"
@@ -78,6 +79,7 @@ class ViewController: UIViewController {
                                                     green: CGFloat(Float(greenTextField.text!) ?? 0)/255.0,
                                                     blue: CGFloat(Float(blueTextField.text!) ?? 0)/255.0,
                                                     alpha: 1.0)
+                let viewColor = colorView.backgroundColor!
                 cmykHexTextField.text = viewColor.cmykHexString
                 rgbHexTextField.text = viewColor.rgbHexString
                 
@@ -92,6 +94,7 @@ class ViewController: UIViewController {
                                                     yellow: Float(yellowTextField.text!) ?? 0/255.0,
                                                     black: Float(blackTextField.text!) ?? 0/255.0,
                                                     alpha: 1.0)
+                let viewColor = colorView.backgroundColor!
                 cmykHexTextField.text = viewColor.cmykHexString
                 rgbHexTextField.text = viewColor.rgbHexString
                 
