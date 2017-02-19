@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TFTColor_Example' do
+  pod 'TFTColor', :path => '../'
+
+  target 'TFTColor_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

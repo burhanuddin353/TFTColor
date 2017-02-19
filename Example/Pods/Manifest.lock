@@ -1,0 +1,16 @@
+PODS:
+  - TFTColor (1.0.0)
+
+DEPENDENCIES:
+  - TFTColor (from `../`)
+
+EXTERNAL SOURCES:
+  TFTColor:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TFTColor: 3023293e1c33e8bea29f1a7abc599994eff60ca0
+
+PODFILE CHECKSUM: 6ee5fcae192edc2100ca0454f78839bd8c2a5be7
+
+COCOAPODS: 1.2.0

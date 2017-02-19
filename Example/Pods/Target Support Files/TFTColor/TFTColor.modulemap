@@ -1,0 +1,6 @@
+framework module TFTColor {
+  umbrella header "TFTColor-umbrella.h"
+
+  export *
+  module * { export * }
+}
