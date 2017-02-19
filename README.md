@@ -47,6 +47,24 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 
 ## Installation
 
+#### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `TFTColor` by adding it to your `Podfile`:
+
+```ruby
+platform :ios, '9.0'
+use_frameworks!
+
+target 'YourApp' do
+    pod 'TFTColor'
+end
+```
+
+Then, run the following command:
+
+``` ruby
+$ pod install
+```
+
 #### Manually
 **Swift**
 
@@ -62,6 +80,8 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 **Swift**
 
 ```swift
+import TFTColor
+
 // UIColor from RGB Hex String
 UIColor(rgbHexString: "FF34AE", alpha: 1.0)
 UIColor(rgbHexString: "#ea", alpha: 1.0)
