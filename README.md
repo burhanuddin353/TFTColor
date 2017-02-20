@@ -106,7 +106,7 @@ UIColor(cmykHexString: "FF34AE34", alpha:1.0)
 UIColor(cmykHexString: "#ea", alpha:1.0)
 
 // UIColor from CMYK Hex Value
-UIColor(cmykHexValue: 0xFF34AE34 alpha:1.0f)
+UIColor(cmykHexValue: 0xFF34AE34 alpha:1.0)
 
 // CMYK Hex String from UIColor
 redColor.cmykHexString //"00646400"
