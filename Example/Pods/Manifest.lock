@@ -1,5 +1,5 @@
 PODS:
-  - TFTColor (1.0.0)
+  - TFTColor (1.0.1)
 
 DEPENDENCIES:
   - TFTColor (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TFTColor: 3023293e1c33e8bea29f1a7abc599994eff60ca0
+  TFTColor: c9c74be3c0cd0bfd122833a8358a5ce08ff59ab0
 
 PODFILE CHECKSUM: 6ee5fcae192edc2100ca0454f78839bd8c2a5be7
 

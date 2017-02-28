@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TFTColor'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A simple UIColor category to get color with hex code.'
   s.homepage         = 'https://github.com/burhanuddin353/TFTColor'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
