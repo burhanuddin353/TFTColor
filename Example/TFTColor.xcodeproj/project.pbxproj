@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		509FBE1489F00224B31CA38D /* Pods_TFTColor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC3444C557DFBAAD0C5D44C /* Pods_TFTColor_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,9 +27,7 @@
 
 /* Begin PBXFileReference section */
 		01CE95053B0C279434A4FA5F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		07152C222B44B19B75B04F36 /* Pods-TFTColor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTColor_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTColor_Tests/Pods-TFTColor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		0BA2D8AED3E31C6B9262D277 /* Pods-TFTColor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTColor_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFTColor_Example/Pods-TFTColor_Example.release.xcconfig"; sourceTree = "<group>"; };
-		1BA051AF4E613C69C223BE52 /* Pods-TFTColor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTColor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTColor_Tests/Pods-TFTColor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		24AE268B468BDFD2FDDF0ADC /* TFTColor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TFTColor.podspec; path = ../TFTColor.podspec; sourceTree = "<group>"; };
 		37B90AE7D8167BF56B897951 /* Pods_TFTColor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TFTColor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5D89772E7FF13C2E9E1899 /* Pods-TFTColor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFTColor_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFTColor_Example/Pods-TFTColor_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509FBE1489F00224B31CA38D /* Pods_TFTColor_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +128,6 @@
 			children = (
 				4C5D89772E7FF13C2E9E1899 /* Pods-TFTColor_Example.debug.xcconfig */,
 				0BA2D8AED3E31C6B9262D277 /* Pods-TFTColor_Example.release.xcconfig */,
-				1BA051AF4E613C69C223BE52 /* Pods-TFTColor_Tests.debug.xcconfig */,
-				07152C222B44B19B75B04F36 /* Pods-TFTColor_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -165,12 +159,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TFTColor_Tests" */;
 			buildPhases = (
-				1C2E1BA35F752A57E39945C6 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				F299C94EE19B73C8896659ED /* [CP] Embed Pods Frameworks */,
-				6AC3CE78E68FBD5839F2B36B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,36 +234,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C2E1BA35F752A57E39945C6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6AC3CE78E68FBD5839F2B36B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTColor_Tests/Pods-TFTColor_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D3A06749B03E1A88B9EB1CE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,21 +277,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTColor_Example/Pods-TFTColor_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F299C94EE19B73C8896659ED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFTColor_Tests/Pods-TFTColor_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -496,7 +442,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA051AF4E613C69C223BE52 /* Pods-TFTColor_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -516,7 +461,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07152C222B44B19B75B04F36 /* Pods-TFTColor_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

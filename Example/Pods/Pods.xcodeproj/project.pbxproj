@@ -7,16 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		159E6AA129916B5D6CB9278FCD712A6C /* Pods-TFTColor_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D1841E77EABADB076BE713FAB7E77C /* Pods-TFTColor_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EE6396281078B8274C8D8F8699C97FC /* TFTColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC7C9EA6D1E41FF8406D7A38113ABC4 /* TFTColor-dummy.m */; };
 		494B9BAC9743F91AAAB76E457D82F0AD /* TFTColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5F053DCFD29E2C36C50FDE6A0C870C /* TFTColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		569DB7CD7B98B55F8A0922322063F786 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		6721C1BDDF2869FFE07121852EBD1ED9 /* TFTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D56443BAB3F8E426874E896B5C66B /* TFTColor.swift */; };
-		91DB184C4F5862B02BD425FA42B4C25E /* Pods-TFTColor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F70F3C7F3A503CEFAE0DF335021671D /* Pods-TFTColor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C1F054039881EAF1DA2E8CEF385045C2 /* Pods-TFTColor_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31797A1170E235FA9E3ACC422750CDE1 /* Pods-TFTColor_Tests-dummy.m */; };
+		91DB184C4F5862B02BD425FA42B4C25E /* Pods-TFTColor_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC54A2C0A05B034F0911760AD970D4D4 /* Pods-TFTColor_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD9B3E1CAAED9248AC698C2F3192B1AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		EB5FDC081F642E9A8D38BF781D7BB457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		FB80BF1EAED8AE760F5BC35B8B6315CE /* Pods-TFTColor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE50B42647FE7BCC48EEB7A05D3A41EE /* Pods-TFTColor_Example-dummy.m */; };
+		FB80BF1EAED8AE760F5BC35B8B6315CE /* Pods-TFTColor_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CD20696DFF26E0C0C440C23566B688 /* Pods-TFTColor_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,38 +27,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06576B6533143BB11DB27DD0DB297F49 /* Pods-TFTColor_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTColor_Example-resources.sh"; sourceTree = "<group>"; };
 		14652421BF7C51D6C5AC23951FBC8D66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17D1841E77EABADB076BE713FAB7E77C /* Pods-TFTColor_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTColor_Tests-umbrella.h"; sourceTree = "<group>"; };
+		15E5882670CD53871723181ABB077DE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E9D56443BAB3F8E426874E896B5C66B /* TFTColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TFTColor.swift; sourceTree = "<group>"; };
-		31797A1170E235FA9E3ACC422750CDE1 /* Pods-TFTColor_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTColor_Tests-dummy.m"; sourceTree = "<group>"; };
-		3554F405EAC0A6AB9F5E9317271FA139 /* Pods_TFTColor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFTColor_Example.framework; path = "Pods-TFTColor_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		228F9561442895ED331C76D26BA65CC9 /* Pods_TFTColor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFTColor_Example.framework; path = "Pods-TFTColor_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B88A32F40A9E418AE3D1566E9729A4 /* Pods-TFTColor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTColor_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2904AD2DFC75F0DB4F53EA4B7C7C7C22 /* Pods-TFTColor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFTColor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		37DA4D26C2571A13CE98B687D811D4E8 /* Pods-TFTColor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TFTColor_Example.modulemap"; sourceTree = "<group>"; };
 		3BC22C3382740C43F650574F85B87799 /* TFTColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFTColor.xcconfig; sourceTree = "<group>"; };
-		48E8CCE9D51F1F9C940406CD51A14A1B /* Pods-TFTColor_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTColor_Tests-resources.sh"; sourceTree = "<group>"; };
-		574EDA0477DD26BD1B4138489F3DEFF8 /* Pods-TFTColor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFTColor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5F70F3C7F3A503CEFAE0DF335021671D /* Pods-TFTColor_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTColor_Example-umbrella.h"; sourceTree = "<group>"; };
-		6A0424E56243CC7EEE3EEEF58A005C6A /* Pods-TFTColor_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFTColor_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		42CD20696DFF26E0C0C440C23566B688 /* Pods-TFTColor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTColor_Example-dummy.m"; sourceTree = "<group>"; };
+		44047B28CC18E23D1DADDE1FC05F9DC3 /* Pods-TFTColor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTColor_Example-frameworks.sh"; sourceTree = "<group>"; };
+		58B26CCF805E15A76429BA649AABC203 /* Pods-TFTColor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTColor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		83C0C42ACBFCB298FA2DA102525D3140 /* TFTColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFTColor-prefix.pch"; sourceTree = "<group>"; };
-		8707A240B4C6598306F87487D0E246BD /* Pods_TFTColor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TFTColor_Tests.framework; path = "Pods-TFTColor_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		890F4DAB7FB70D1C1E25FE5FC6F18C91 /* Pods-TFTColor_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFTColor_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93D4047F96900DE833E5CDCB077C368C /* Pods-TFTColor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTColor_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A08C48B7A7738BFD80B922FF22161F05 /* Pods-TFTColor_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TFTColor_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A3EA3F12D4FEC403E805C6F654C8BC00 /* TFTColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TFTColor.modulemap; sourceTree = "<group>"; };
+		A59C1E2BFE3BE1A69CE1C5AE9A4B27E4 /* TFTColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TFTColor.framework; path = TFTColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC7C9EA6D1E41FF8406D7A38113ABC4 /* TFTColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TFTColor-dummy.m"; sourceTree = "<group>"; };
-		B717DB31B9760A50192737C587C3FDB0 /* Pods-TFTColor_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TFTColor_Tests.modulemap"; sourceTree = "<group>"; };
-		C93B8D52F7EB78F9AA5EA2DBE0FAD9ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAA604A2B10D66287464E2D87D6918AB /* Pods-TFTColor_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TFTColor_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D0DD9B7B493526A288AC486BAB1D771A /* Pods-TFTColor_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TFTColor_Example.modulemap"; sourceTree = "<group>"; };
-		DA6B9D6BE2B497927EF94F59B7D059D3 /* Pods-TFTColor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTColor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E4526F79C172A80F684F0AA1CF2D9284 /* TFTColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TFTColor.framework; path = TFTColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7167B175BAF55999EC1B84CAA5E42D8 /* Pods-TFTColor_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTColor_Example-frameworks.sh"; sourceTree = "<group>"; };
-		EB673CC28387B493DD7C0687A4F65F44 /* Pods-TFTColor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTColor_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EE50B42647FE7BCC48EEB7A05D3A41EE /* Pods-TFTColor_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TFTColor_Example-dummy.m"; sourceTree = "<group>"; };
-		F27D5813DA90E2123B0E2186B7B6C1CA /* Pods-TFTColor_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTColor_Example-resources.sh"; sourceTree = "<group>"; };
-		F36D609701C680D1E4EFBFA8A9D26261 /* Pods-TFTColor_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TFTColor_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		FA5F053DCFD29E2C36C50FDE6A0C870C /* TFTColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFTColor-umbrella.h"; sourceTree = "<group>"; };
-		FEABF3EFC1B2C4617F8CE38B4E5A403B /* Pods-TFTColor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TFTColor_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FEF260F5F5D7DBABBA1F45B0CA269061 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC54A2C0A05B034F0911760AD970D4D4 /* Pods-TFTColor_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TFTColor_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2EEA100DC702B06E369C63E392BA03C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				569DB7CD7B98B55F8A0922322063F786 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,33 +79,6 @@
 			path = TFTColor;
 			sourceTree = "<group>";
 		};
-		0E9A7E1E7EC219FFD083D0BBDC65A470 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				728B6C24A908F538C9CBC80363381F5D /* Pods-TFTColor_Example */,
-				D04C618DE0E68A07F91F134B927788C1 /* Pods-TFTColor_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		728B6C24A908F538C9CBC80363381F5D /* Pods-TFTColor_Example */ = {
-			isa = PBXGroup;
-			children = (
-				FEF260F5F5D7DBABBA1F45B0CA269061 /* Info.plist */,
-				D0DD9B7B493526A288AC486BAB1D771A /* Pods-TFTColor_Example.modulemap */,
-				6A0424E56243CC7EEE3EEEF58A005C6A /* Pods-TFTColor_Example-acknowledgements.markdown */,
-				574EDA0477DD26BD1B4138489F3DEFF8 /* Pods-TFTColor_Example-acknowledgements.plist */,
-				EE50B42647FE7BCC48EEB7A05D3A41EE /* Pods-TFTColor_Example-dummy.m */,
-				E7167B175BAF55999EC1B84CAA5E42D8 /* Pods-TFTColor_Example-frameworks.sh */,
-				F27D5813DA90E2123B0E2186B7B6C1CA /* Pods-TFTColor_Example-resources.sh */,
-				5F70F3C7F3A503CEFAE0DF335021671D /* Pods-TFTColor_Example-umbrella.h */,
-				FEABF3EFC1B2C4617F8CE38B4E5A403B /* Pods-TFTColor_Example.debug.xcconfig */,
-				EB673CC28387B493DD7C0687A4F65F44 /* Pods-TFTColor_Example.release.xcconfig */,
-			);
-			name = "Pods-TFTColor_Example";
-			path = "Target Support Files/Pods-TFTColor_Example";
-			sourceTree = "<group>";
-		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,15 +87,50 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		76A8232E7822647BFF0AB4CAAAAEF050 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C0FC7339955EC7873B11ED46D472DA6 /* Pods-TFTColor_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				CA6DCD26F599417B055605E040740B89 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F193DD28955A303C32482CD44F22BF14 /* Products */,
-				0E9A7E1E7EC219FFD083D0BBDC65A470 /* Targets Support Files */,
+				8F39074917E6A608990BDABD2410A35F /* Products */,
+				76A8232E7822647BFF0AB4CAAAAEF050 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8C0FC7339955EC7873B11ED46D472DA6 /* Pods-TFTColor_Example */ = {
+			isa = PBXGroup;
+			children = (
+				15E5882670CD53871723181ABB077DE4 /* Info.plist */,
+				37DA4D26C2571A13CE98B687D811D4E8 /* Pods-TFTColor_Example.modulemap */,
+				2904AD2DFC75F0DB4F53EA4B7C7C7C22 /* Pods-TFTColor_Example-acknowledgements.markdown */,
+				A08C48B7A7738BFD80B922FF22161F05 /* Pods-TFTColor_Example-acknowledgements.plist */,
+				42CD20696DFF26E0C0C440C23566B688 /* Pods-TFTColor_Example-dummy.m */,
+				44047B28CC18E23D1DADDE1FC05F9DC3 /* Pods-TFTColor_Example-frameworks.sh */,
+				06576B6533143BB11DB27DD0DB297F49 /* Pods-TFTColor_Example-resources.sh */,
+				FC54A2C0A05B034F0911760AD970D4D4 /* Pods-TFTColor_Example-umbrella.h */,
+				58B26CCF805E15A76429BA649AABC203 /* Pods-TFTColor_Example.debug.xcconfig */,
+				23B88A32F40A9E418AE3D1566E9729A4 /* Pods-TFTColor_Example.release.xcconfig */,
+			);
+			name = "Pods-TFTColor_Example";
+			path = "Target Support Files/Pods-TFTColor_Example";
+			sourceTree = "<group>";
+		};
+		8F39074917E6A608990BDABD2410A35F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				228F9561442895ED331C76D26BA65CC9 /* Pods_TFTColor_Example.framework */,
+				A59C1E2BFE3BE1A69CE1C5AE9A4B27E4 /* TFTColor.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		96A8BCCB67C6B263E0E166B3D065AE98 /* TFTColor */ = {
@@ -173,24 +159,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		D04C618DE0E68A07F91F134B927788C1 /* Pods-TFTColor_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C93B8D52F7EB78F9AA5EA2DBE0FAD9ED /* Info.plist */,
-				B717DB31B9760A50192737C587C3FDB0 /* Pods-TFTColor_Tests.modulemap */,
-				CAA604A2B10D66287464E2D87D6918AB /* Pods-TFTColor_Tests-acknowledgements.markdown */,
-				890F4DAB7FB70D1C1E25FE5FC6F18C91 /* Pods-TFTColor_Tests-acknowledgements.plist */,
-				31797A1170E235FA9E3ACC422750CDE1 /* Pods-TFTColor_Tests-dummy.m */,
-				F36D609701C680D1E4EFBFA8A9D26261 /* Pods-TFTColor_Tests-frameworks.sh */,
-				48E8CCE9D51F1F9C940406CD51A14A1B /* Pods-TFTColor_Tests-resources.sh */,
-				17D1841E77EABADB076BE713FAB7E77C /* Pods-TFTColor_Tests-umbrella.h */,
-				DA6B9D6BE2B497927EF94F59B7D059D3 /* Pods-TFTColor_Tests.debug.xcconfig */,
-				93D4047F96900DE833E5CDCB077C368C /* Pods-TFTColor_Tests.release.xcconfig */,
-			);
-			name = "Pods-TFTColor_Tests";
-			path = "Target Support Files/Pods-TFTColor_Tests";
-			sourceTree = "<group>";
-		};
 		EAE75921FE317EE7C439071A8A1F672A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,27 +173,9 @@
 			path = "Example/Pods/Target Support Files/TFTColor";
 			sourceTree = "<group>";
 		};
-		F193DD28955A303C32482CD44F22BF14 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3554F405EAC0A6AB9F5E9317271FA139 /* Pods_TFTColor_Example.framework */,
-				8707A240B4C6598306F87487D0E246BD /* Pods_TFTColor_Tests.framework */,
-				E4526F79C172A80F684F0AA1CF2D9284 /* TFTColor.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4864DE0545AACC4273991A145688CAD4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				159E6AA129916B5D6CB9278FCD712A6C /* Pods-TFTColor_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B05ED4B8ACCC84BD0C75C0C6613D6BF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,23 +195,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		724CE3645B9700EE8E35E938B75887D0 /* Pods-TFTColor_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7F6A0A0D59207DAD11DAFDACD0DE8907 /* Build configuration list for PBXNativeTarget "Pods-TFTColor_Tests" */;
-			buildPhases = (
-				CF7C6B814E17D72A3A73CF21CCB300FA /* Sources */,
-				E2EEA100DC702B06E369C63E392BA03C /* Frameworks */,
-				4864DE0545AACC4273991A145688CAD4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-TFTColor_Tests";
-			productName = "Pods-TFTColor_Tests";
-			productReference = 8707A240B4C6598306F87487D0E246BD /* Pods_TFTColor_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		887381D0A883B0A7A69A5A4EF8D6E3EB /* TFTColor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CE998552AC159EE758107F96503B0BF /* Build configuration list for PBXNativeTarget "TFTColor" */;
@@ -276,7 +209,7 @@
 			);
 			name = TFTColor;
 			productName = TFTColor;
-			productReference = E4526F79C172A80F684F0AA1CF2D9284 /* TFTColor.framework */;
+			productReference = A59C1E2BFE3BE1A69CE1C5AE9A4B27E4 /* TFTColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E2181B7A394FF0494899403FAB7109C8 /* Pods-TFTColor_Example */ = {
@@ -294,7 +227,7 @@
 			);
 			name = "Pods-TFTColor_Example";
 			productName = "Pods-TFTColor_Example";
-			productReference = 3554F405EAC0A6AB9F5E9317271FA139 /* Pods_TFTColor_Example.framework */;
+			productReference = 228F9561442895ED331C76D26BA65CC9 /* Pods_TFTColor_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -314,12 +247,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F193DD28955A303C32482CD44F22BF14 /* Products */;
+			productRefGroup = 8F39074917E6A608990BDABD2410A35F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E2181B7A394FF0494899403FAB7109C8 /* Pods-TFTColor_Example */,
-				724CE3645B9700EE8E35E938B75887D0 /* Pods-TFTColor_Tests */,
 				887381D0A883B0A7A69A5A4EF8D6E3EB /* TFTColor */,
 			);
 		};
@@ -340,14 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB80BF1EAED8AE760F5BC35B8B6315CE /* Pods-TFTColor_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF7C6B814E17D72A3A73CF21CCB300FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1F054039881EAF1DA2E8CEF385045C2 /* Pods-TFTColor_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +321,7 @@
 		};
 		0CAFC706E79A1B2A1DE2A2CAE2B46EC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEABF3EFC1B2C4617F8CE38B4E5A403B /* Pods-TFTColor_Example.debug.xcconfig */;
+			baseConfigurationReference = 58B26CCF805E15A76429BA649AABC203 /* Pods-TFTColor_Example.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -458,41 +382,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3B74FB49F3784422E531617901BA5AD6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA6B9D6BE2B497927EF94F59B7D059D3 /* Pods-TFTColor_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TFTColor_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TFTColor_Tests/Pods-TFTColor_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TFTColor_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -585,7 +474,7 @@
 		};
 		DDF5168D23BDE3D86977C85BB56C078E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB673CC28387B493DD7C0687A4F65F44 /* Pods-TFTColor_Example.release.xcconfig */;
+			baseConfigurationReference = 23B88A32F40A9E418AE3D1566E9729A4 /* Pods-TFTColor_Example.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -610,41 +499,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_TFTColor_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E149D51909446632E3A7858496F835F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93D4047F96900DE833E5CDCB077C368C /* Pods-TFTColor_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TFTColor_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TFTColor_Tests/Pods-TFTColor_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TFTColor_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,15 +533,6 @@
 			buildConfigurations = (
 				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
 				B7324857C38B065FEB1EEE3105C2367A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7F6A0A0D59207DAD11DAFDACD0DE8907 /* Build configuration list for PBXNativeTarget "Pods-TFTColor_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B74FB49F3784422E531617901BA5AD6 /* Debug */,
-				E149D51909446632E3A7858496F835F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
