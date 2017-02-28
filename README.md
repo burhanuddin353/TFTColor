@@ -6,6 +6,7 @@ You can also retrieve back RGB hex string/value, CMYK hex string/value.
 [![Swift Version][swift-image]][swift-url]
 [![Objective C][objc-image]][objc-url]
 [![License][license-image]][license-url]
+[![DOI](https://zenodo.org/badge/26798948.svg)](https://zenodo.org/badge/latestdoi/26798948)
 
 <img src="https://github.com/burhanuddin353/TFTColor/blob/master/Example.png" width="375">
 
