@@ -13,39 +13,36 @@ public extension UIColor {
     //MARK: Private Helper Methods
     private static func clean(_ hexString: inout String, expectedLength: Int) {
         
-        if hexString.hasPrefix("#") {
-            hexString.remove(at: hexString.startIndex)
-        }
-        else if hexString.hasPrefix("0x") || hexString.hasPrefix("0X") {
-            hexString.removeSubrange(hexString.startIndex...hexString.index(hexString.startIndex, offsetBy: 1))
-        }
+        hexString = hexString.trimmingCharacters(in: CharacterSet(charactersIn: "#"))
+        hexString = hexString.replacingOccurrences(of: "0x", with: "")
+        hexString = hexString.replacingOccurrences(of: "0X", with: "")
         
         //Check for Special Characters. Truncate the string from first special character.
         let characterSet = CharacterSet(charactersIn: "abcdefABCDEF1234567890").inverted
         if let firstInvalidCharPosition = hexString.rangeOfCharacter(from: characterSet)?.lowerBound {
             hexString.removeSubrange(firstInvalidCharPosition..<hexString.endIndex)
         }
-
+        
         //Repeat the characters if they are half of expected length. 
         //Example(RGB): 353 -> 335533
-        if hexString.characters.count == expectedLength/2 {
+        if hexString.count == expectedLength/2 {
             
-            for i in 0..<expectedLength/2 {
-                
+            for (i, char) in hexString.enumerated() {
+
                 let index = hexString.index(hexString.startIndex, offsetBy: i*2)
-                hexString.insert(hexString[index], at: index)
+                hexString.insert(char, at: index)
             }
         }
         //Append leading zeros if the length is less than the expected length
         //Example(RGB): 5C -> 00005C
-        else if hexString.characters.count < expectedLength {
-            while hexString.characters.count != expectedLength {
+        else if hexString.count < expectedLength {
+            while hexString.count != expectedLength {
                 hexString.insert("0", at: hexString.startIndex)
             }
         }
         //Truncate the excess string if length is greater than expected length
         //Example(RGB): FFDF00321 -> FFDF00
-        else if hexString.characters.count > expectedLength {
+        else if hexString.count > expectedLength {
             hexString.removeSubrange(hexString.index(hexString.startIndex, offsetBy: expectedLength)..<hexString.endIndex)
         }
     }
@@ -59,15 +56,15 @@ public extension UIColor {
     
     private var rgbComponents: [CGFloat] {
         
-        var red: CGFloat = 0.0
-        var green: CGFloat = 0.0
-        var blue: CGFloat = 0.0
-        var alpha: CGFloat = 0.0
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
         self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         
-        red = min(1.0, red)
-        green = min(1.0, green)
-        blue = min(1.0, blue)
+        red = min(1, red)
+        green = min(1, green)
+        blue = min(1, blue)
         
         return [red, green, blue]
     }
@@ -80,7 +77,7 @@ public extension UIColor {
         
         let black = 1 - max(max(red, green), blue)
         if black == 1 {
-            return [0.0, 0.0, 0.0, 1.0]
+            return [0, 0, 0, 1]
         }
         
         let cyan =  (1 - red - black) / (1 - black)
@@ -101,9 +98,9 @@ public extension UIColor {
     
     public convenience init(rgbHexValue: UInt64, alpha: Float) {
         
-        self.init(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255.0,
-                  green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255.0,
-                  blue: CGFloat(rgbHexValue & 0xFF)/255.0,
+        self.init(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255,
+                  green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255,
+                  blue: CGFloat(rgbHexValue & 0xFF)/255,
                   alpha: CGFloat(alpha))
     }
     
@@ -127,16 +124,16 @@ public extension UIColor {
         return hexValue
     }
     
-    public var red: UInt {
-        return UInt(rgbComponents[0] * 255.0)
+    public var redValue: UInt {
+        return UInt(rgbComponents[0] * 255)
     }
     
-    public var green: UInt {
-        return UInt(rgbComponents[1] * 255.0)
+    public var greenValue: UInt {
+        return UInt(rgbComponents[1] * 255)
     }
     
-    public var blue: UInt {
-        return UInt(rgbComponents[2] * 255.0)
+    public var blueValue: UInt {
+        return UInt(rgbComponents[2] * 255)
     }
     
     //MARK: CMYK
@@ -157,10 +154,10 @@ public extension UIColor {
     
     public convenience init(cmykHexValue: UInt64, alpha: Float) {
         
-        self.init(cyan: Float((cmykHexValue & 0xFF000000) >> 24)/255.0,
-                  magenta: Float((cmykHexValue & 0xFF0000) >> 16)/255.0,
-                  yellow: Float((cmykHexValue & 0xFF00) >> 8)/255.0,
-                  black: Float(cmykHexValue & 0xFF)/255.0,
+        self.init(cyan: Float((cmykHexValue & 0xFF000000) >> 24)/255,
+                  magenta: Float((cmykHexValue & 0xFF0000) >> 16)/255,
+                  yellow: Float((cmykHexValue & 0xFF00) >> 8)/255,
+                  black: Float(cmykHexValue & 0xFF)/255,
                   alpha: alpha)
     }
     
@@ -185,19 +182,32 @@ public extension UIColor {
         return hexValue
     }
     
-    public var cyan: UInt {
-        return UInt(cmykComponents[0] * 255.0)
+    public var cyanValue: UInt {
+        return UInt(cmykComponents[0] * 255)
     }
     
-    public var magenta: UInt {
-        return UInt(cmykComponents[1] * 255.0)
+    public var magentaValue: UInt {
+        return UInt(cmykComponents[1] * 255)
     }
     
-    public var yellow: UInt {
-        return UInt(cmykComponents[2] * 255.0)
+    public var yellowValue: UInt {
+        return UInt(cmykComponents[2] * 255)
     }
     
-    public var black: UInt {
-        return UInt(cmykComponents[3] * 255.0)
+    public var blackValue: UInt {
+        return UInt(cmykComponents[3] * 255)
+    }
+    
+    //MARK: Utility
+    public var complementary: UIColor {
+        
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        var brightness: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha);
+        print(hue, saturation, brightness, alpha)
+        return UIColor(hue: 1-hue, saturation: 1-saturation, brightness: 1-brightness, alpha: alpha)
     }
 }
