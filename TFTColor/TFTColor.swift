@@ -76,9 +76,7 @@ public extension UIColor {
         let blue = rgbComponents[2]
         
         let black = 1 - max(max(red, green), blue)
-        if black == 1 {
-            return [0, 0, 0, 1]
-        }
+        if black == 1 { return [0, 0, 0, 1] }
         
         let cyan =  (1 - red - black) / (1 - black)
         let magenta =  (1 - green - black) / (1 - black)
@@ -89,31 +87,26 @@ public extension UIColor {
     
     //MARK: Public Methods
     //MARK: RGB
-    public convenience init(rgbHexString: String, alpha: Float) {
+    convenience init(rgbHexString: String, alpha: Float = 1.0) {
         
-        var rgbHexString = rgbHexString
-        UIColor.clean(&rgbHexString, expectedLength: 6)
-        self.init(rgbHexValue: UIColor.hexValue(from: rgbHexString), alpha: alpha)
+        var rgbHex = rgbHexString
+        UIColor.clean(&rgbHex, expectedLength: 6)
+        self.init(rgbHexValue: UIColor.hexValue(from: rgbHex), alpha: alpha)
     }
     
-    public convenience init(rgbHexValue: UInt64, alpha: Float) {
-        
+    convenience init(rgbHexValue: UInt64, alpha: Float = 1.0) {
+
         self.init(red: CGFloat((rgbHexValue & 0xFF0000) >> 16)/255,
                   green: CGFloat((rgbHexValue & 0xFF00) >> 8)/255,
                   blue: CGFloat(rgbHexValue & 0xFF)/255,
                   alpha: CGFloat(alpha))
     }
     
-    public var rgbHexString: String {
-        
-        var hexString = ""
-        for component in rgbComponents {
-            hexString.append(String(format: "%02x", arguments: [UInt(component * 255)]))
-        }
-        return hexString
+    var rgbHexString: String {
+        rgbComponents.map({ String(format: "%02x", arguments: [UInt($0 * 255)]) }).joined()
     }
     
-    public var rgbHexValue: UInt {
+    var rgbHexValue: UInt {
         
         let rgbValues = rgbComponents
         var hexValue: UInt = 0
@@ -124,20 +117,12 @@ public extension UIColor {
         return hexValue
     }
     
-    public var redValue: UInt {
-        return UInt(rgbComponents[0] * 255)
-    }
-    
-    public var greenValue: UInt {
-        return UInt(rgbComponents[1] * 255)
-    }
-    
-    public var blueValue: UInt {
-        return UInt(rgbComponents[2] * 255)
-    }
+    var redValue: UInt { UInt(rgbComponents[0] * 255) }
+    var greenValue: UInt { UInt(rgbComponents[1] * 255) }
+    var blueValue: UInt { UInt(rgbComponents[2] * 255) }
     
     //MARK: CMYK
-    public convenience init(cyan: Float, magenta: Float, yellow: Float, black: Float, alpha: Float) {
+    convenience init(cyan: Float, magenta: Float, yellow: Float, black: Float, alpha: Float) {
         
         let red = (1 - cyan) * (1 - black)
         let green = (1 - magenta) * (1 - black)
@@ -145,14 +130,14 @@ public extension UIColor {
         self.init(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
     }
     
-    public convenience init(cmykHexString: String, alpha: Float) {
-        
-        var cmykHexString = cmykHexString
-        UIColor.clean(&cmykHexString, expectedLength: 8)
-        self.init(cmykHexValue: UIColor.hexValue(from: cmykHexString), alpha: alpha);
+    convenience init(cmykHexString: String, alpha: Float = 1.0) {
+
+        var cmykHex = cmykHexString
+        UIColor.clean(&cmykHex, expectedLength: 8)
+        self.init(cmykHexValue: UIColor.hexValue(from: cmykHex), alpha: alpha);
     }
     
-    public convenience init(cmykHexValue: UInt64, alpha: Float) {
+    convenience init(cmykHexValue: UInt64, alpha: Float = 1.0) {
         
         self.init(cyan: Float((cmykHexValue & 0xFF000000) >> 24)/255,
                   magenta: Float((cmykHexValue & 0xFF0000) >> 16)/255,
@@ -161,16 +146,11 @@ public extension UIColor {
                   alpha: alpha)
     }
     
-    public var cmykHexString: String {
-        
-        var hexString = ""
-        for component in cmykComponents {
-            hexString.append(String(format: "%02x", arguments: [UInt(component * 255)]))
-        }
-        return hexString
+    var cmykHexString: String {
+        cmykComponents.map({ String(format: "%02x", arguments: [UInt($0 * 255)]) }).joined()
     }
     
-    public var cmykHexValue: UInt64 {
+    var cmykHexValue: UInt64 {
         
         let cmykValues = cmykComponents
         var hexValue: UInt64 = 0
@@ -182,24 +162,13 @@ public extension UIColor {
         return hexValue
     }
     
-    public var cyanValue: UInt {
-        return UInt(cmykComponents[0] * 255)
-    }
-    
-    public var magentaValue: UInt {
-        return UInt(cmykComponents[1] * 255)
-    }
-    
-    public var yellowValue: UInt {
-        return UInt(cmykComponents[2] * 255)
-    }
-    
-    public var blackValue: UInt {
-        return UInt(cmykComponents[3] * 255)
-    }
+    var cyanValue: UInt { UInt(cmykComponents[0] * 255) }
+    var magentaValue: UInt { UInt(cmykComponents[1] * 255) }
+    var yellowValue: UInt { UInt(cmykComponents[2] * 255) }
+    var blackValue: UInt { UInt(cmykComponents[3] * 255) }
     
     //MARK: Utility
-    public var complementary: UIColor {
+    var complementary: UIColor {
         
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
